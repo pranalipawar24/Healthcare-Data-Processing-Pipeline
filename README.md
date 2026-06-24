@@ -61,20 +61,32 @@ Health-Data-Pipeline/
 ├── insert_health_dml.sql
 ├── sql_database.png
 └── README.md
+```
 ---
 
 ## 🔄 Data Pipeline Flow
 
-```mermaid
-flowchart TD
-    A[PostgreSQL] --> B[PySpark Extraction]
-    B --> C[Amazon S3 (Parquet)]
-    C --> D[Apache Hive]
-    D --> E[Spark SQL Analytics]
-    E --> F[Reports & Insights]
-    F --> G[Amazon S3]
+```text
+PostgreSQL
+     │
+     ▼
+PySpark Extraction
+     │
+     ▼
+Amazon S3 (Parquet)
+     │
+     ▼
+Apache Hive
+     │
+     ▼
+Spark SQL Analytics
+     │
+     ▼
+Reports & Insights
+     │
+     ▼
+Amazon S3
 ```
-
 ---
 
 ## 🏥 Database Tables
