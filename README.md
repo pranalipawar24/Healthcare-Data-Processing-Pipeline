@@ -47,7 +47,7 @@ An end-to-end healthcare data engineering pipeline that extracts data from a rel
 ---
 
 ## 📁 Project Structure
-
+```text
 Health-Data-Pipeline/
 │
 ├── health_datapipeline_dag.py
@@ -274,16 +274,6 @@ WHERE Amount > 1000;
 
 ---
 
-## 🧠 Future Improvements
-
-- 📡 Real-time data ingestion using Apache Kafka
-- 🤖 Machine Learning for disease prediction
-- 📊 Power BI / Tableau dashboards
-- 🏥 Healthcare KPI monitoring
-- ☁️ Amazon Redshift Data Warehouse integration
-- 🔍 Automated data quality checks
-
----
 
 ## 👨‍💻 Author
 
@@ -298,5 +288,3 @@ Data Engineering & Analytics Enthusiast
 ## 🛡 License
 
 This project is licensed under the **MIT License**.
-
-This project is licensed under the MIT License.
