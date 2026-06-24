@@ -62,7 +62,8 @@ Health-Data-Pipeline/
 ├── insert_health_dml.sql
 ├── sql_database.png
 └── README.md
-🔄 Data Pipeline Flow
+---
+## 🔄 Data Pipeline Flow
 PostgreSQL
      │
      ▼
@@ -82,7 +83,8 @@ Reports & Insights
      │
      ▼
 Amazon S3
-🏥 Database Tables
+
+##🏥 Database Tables
 
 The healthcare database contains the following entities:
 
