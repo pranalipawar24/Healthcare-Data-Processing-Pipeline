@@ -48,6 +48,7 @@ An end-to-end healthcare data engineering pipeline that extracts data from a rel
 
 ## 📁 Project Structure
 
+```text
 Health-Data-Pipeline/
 │
 ├── health_datapipeline_dag.py
@@ -62,6 +63,7 @@ Health-Data-Pipeline/
 ├── sql_database.png
 └── README.md
 ---
+
 ## 🔄 Data Pipeline Flow
 
 PostgreSQL
