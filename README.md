@@ -291,7 +291,6 @@ WHERE Amount > 1000;
 
 **Pranali Pawar**  
 Computer Engineering Student  
-Data Engineering & Analytics Enthusiast
 
 🔗 GitHub: https://github.com/pranalipawar24
 
