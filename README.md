@@ -62,8 +62,10 @@ Health-Data-Pipeline/
 ├── insert_health_dml.sql
 ├── sql_database.png
 └── README.md
----
+
 ## 🔄 Data Pipeline Flow
+
+```text
 PostgreSQL
      │
      ▼
@@ -83,43 +85,19 @@ Reports & Insights
      │
      ▼
 Amazon S3
-
-##🏥 Database Tables
+🏥 Database Tables
 
 The healthcare database contains the following entities:
 
-Patients
-
-Stores patient information.
-
-Doctors
-
-Stores doctor details and specializations.
-
-Appointments
-
-Tracks patient-doctor appointments.
-
-Treatments
-
-Stores treatment information.
-
-Medications
-
-Stores medication details.
-
-Prescriptions
-
-Links doctors and medications.
-
-Billing
-
-Stores patient billing information.
-
-Medical History
-
-Stores historical health conditions.
-
+Table	Description
+Patients	Stores patient information
+Doctors	Stores doctor details and specializations
+Appointments	Tracks patient-doctor appointments
+Treatments	Stores treatment information
+Medications	Stores medication details
+Prescriptions	Links doctors and medications
+Billing	Stores patient billing information
+Medical History	Stores historical health conditions
 🚀 Getting Started
 🔧 1. Clone the Repository
 git clone https://github.com/yourusername/Health-Data-Pipeline.git
@@ -140,7 +118,7 @@ Insert sample healthcare data:
 insert_health_dml.sql
 ☁️ 4. Configure AWS Services
 
-Configure:
+Configure the following services:
 
 Amazon S3 Bucket
 Amazon EMR Cluster
@@ -169,7 +147,7 @@ Start Airflow Web Server:
 
 airflow webserver
 
-Trigger DAG from Airflow UI.
+Then trigger the DAG from the Airflow UI.
 
 📊 Generated Reports
 👨‍⚕️ Doctor Performance Report
@@ -202,17 +180,17 @@ Disease frequency
 Patient condition trends
 Healthcare insights
 📈 Sample Analytics
-Total Billing per Patient
+💰 Total Billing per Patient
 SELECT PatientID,
-SUM(Amount) AS TotalBilling
+       SUM(Amount) AS TotalBilling
 FROM Billing
 GROUP BY PatientID;
-Appointment Count by Doctor
+👨‍⚕️ Appointment Count by Doctor
 SELECT DoctorID,
-COUNT(*) AS TotalAppointments
+       COUNT(*) AS TotalAppointments
 FROM Appointments
 GROUP BY DoctorID;
-High Billing Patients
+💸 High Billing Patients
 SELECT *
 FROM Billing
 WHERE Amount > 1000;
@@ -220,7 +198,7 @@ WHERE Amount > 1000;
 📄 rdbms_read_and_write_to_s3.py
 Reads healthcare data from PostgreSQL
 Converts data into Spark DataFrames
-Writes data to S3 as Parquet files
+Writes data to Amazon S3 as Parquet files
 📄 read_from_s3_and_transform_to_hive.py
 Reads Parquet files from S3
 Performs data cleaning and transformations
@@ -228,21 +206,21 @@ Loads data into Hive tables
 📄 spark_sql_transformation_and_write_to_s3.py
 Executes Spark SQL queries
 Generates analytical datasets
-Stores results in S3
+Stores results in Amazon S3
 📄 spark_hive_write_to_s3.py
 Reads Hive tables
 Creates business reports
-Writes reports to S3
+Writes reports to Amazon S3
 📄 health_datapipeline_dag.py
-Airflow DAG
-Automates entire workflow
-Handles scheduling and dependencies
+Apache Airflow DAG
+Automates the entire workflow
+Handles scheduling and task dependencies
 🧠 Future Improvements
 📡 Real-time data ingestion using Apache Kafka
 🤖 Machine Learning for disease prediction
 📊 Power BI / Tableau dashboards
 🏥 Healthcare KPI monitoring
-☁️ Redshift Data Warehouse integration
+☁️ Amazon Redshift Data Warehouse integration
 🔍 Automated data quality checks
 👨‍💻 Author
 
@@ -250,8 +228,10 @@ Pranali Pawar
 Computer Engineering Student
 Data Engineering & Analytics Enthusiast
 
-GitHub: https://github.com/pranalipawar24
+🔗 GitHub: https://github.com/pranalipawar24
 
 🛡 License
+
+This project is licensed under the MIT License.
 
 This project is licensed under the MIT License.
